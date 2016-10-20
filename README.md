@@ -82,7 +82,7 @@ Luego ejecuto el comando:
 ```
 Python files.py
 ```
-##Pantallazos Solución
+##PANTALLAZOS SOLUCION
 
 **Prueba GET FILES**
 ![alt text](https://github.com/dylan9538/parcialUno/blob/master/GET%20FILES.PNG "Prueba GET de /files")
