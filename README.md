@@ -72,11 +72,77 @@ $ mkdir -p ejercicios/ejercicio1
 $ cd ejercicios/ejercicio1
 ```
 **5)Creo el archivo files_commands.py que contiene el siguiente codigo**
+```
+from subprocess import Popen, PIPE
 
-![alt text](https://github.com/dylan9538/BodegaeSemaforo/blob/master/DiagramClassSemaforo.PNG "Diagrama de clases")
- 
+def get_all_files():
+  grep_process = Popen(["ls"], stdout=PIPE, stderr=PIPE)
+  file_list = Popen(["awk","-F","/",'{print $1}'], stdin=grep_process.stdout, stdout=PIPE, stderr=PIPE).communicate()[0].split('\n')
+  return filter(None,file_list)
+
+def add_file(filename,content):
+  add_process = Open(filename+'.txt','a')
+  add_process.write(content+'/n')
+  add_process.close()
+  return "Se creo el archivo" , 201
+
+def remove_file(filename):
+  vip = ["ambientes","los_repositorios","files","files_commands"]
+  if filename in vip:
+    return True
+  else:
+    remove_process = Popen(["rm","-r",filename], stdout=PIPE, stderr=PIPE)
+    remove_process.wait()
+    return False if filename in get_all_files() else True
+ ```
 **6)Creo el archivo files.py que maneje los procesos de files_commands.py y que contenga las URIS. El siguiente es el código:**
- 
+```
+from flask import Flask, abort, request
+import json
+
+from files_commands import get_all_files, add_file, remove_file
+
+app = Flask(__name__)
+
+api_url = '/recently_created'
+
+@app.route('/files',methods=['POST'])
+def create_file():
+  content = request.get_json(silent=True)
+  filename = content['filename']
+  content =  content['content']
+  add_file(filename,content)  
+  return "Se creo",201
+  
+
+@app.route('/files',methods=['GET'])
+def read_file():
+  list = {}
+  list["files"] = get_all_files()
+  return json.dumps(list), 200
+
+@app.route('/files',methods=['PUT'])
+def update_file():
+  return "not found", 404
+
+@app.route('/files',methods=['DELETE'])
+def delete_file():
+  error = False
+  for username in get_all_files():
+    if not remove_file(filename):
+        error = True
+
+  if error:
+    return 'some files were not deleted', 400
+  else:
+    return 'all files  were deleted', 200  	 
+
+if __name__ == "__main__":
+  app.run(host='0.0.0.0',port=8088,debug='True')
+```
+
+
+
 
 Luego ejecuto el comando:
 ```
