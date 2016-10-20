@@ -84,7 +84,17 @@ Python files.py
 ```
 ##Pantallazos Solución
 
+**Prueba GET FILES**
 ![alt text](https://github.com/dylan9538/parcialUno/blob/master/GET%20FILES.PNG "Prueba GET de /files")
+
+**Prueba CREATE FILES**
+![alt text](https://github.com/dylan9538/parcialUno/blob/master/CREATE_FILE.PNG "Prueba GET de /files")
+
+**Prueba DELETE FILES**
+![alt text](https://github.com/dylan9538/parcialUno/blob/master/DELETE_FILE.png "Prueba GET de /files")
+
+**Prueba UPDATE FILES**
+![alt text](https://github.com/dylan9538/parcialUno/blob/master/UPDATE_FILE.PNG "Prueba GET de /files")
 
 ##CUANDO QUIERA SUBIR ARCHIVOS
 
