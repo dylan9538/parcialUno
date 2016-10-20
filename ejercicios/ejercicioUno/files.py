@@ -17,17 +17,17 @@ def create_file():
   
 
 @app.route('/files',methods=['GET'])
-def read_user():
+def read_file():
   list = {}
   list["files"] = get_all_files()
   return json.dumps(list), 200
 
 @app.route('/files',methods=['PUT'])
-def update_user():
+def update_file():
   return "not found", 404
 
 @app.route('/files',methods=['DELETE'])
-def delete_user():
+def delete_file():
   error = False
   for username in get_all_files():
     if not remove_file(filename):
