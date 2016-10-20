@@ -84,7 +84,7 @@ Python files.py
 ```
 ##Pantallazos Solución
 
-![alt text](https://github.com/dylan9538/BodegaeSemaforo/blob/master/Prueba1.PNG "Prueba GET de /files")
+![alt text](https://github.com/dylan9538/parcialUno/blob/master/GET%20FILES.PNG "Prueba GET de /files")
 
 ##CUANDO QUIERA SUBIR ARCHIVOS
 
