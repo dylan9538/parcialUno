@@ -12,7 +12,9 @@ SE SIGUEN LOS SIGUIENTES PASOS CON SUS COMANDOS
 ```
 Vi etc/sysconfig/iptables
 ```
-Luego agregamos los puertos que necesitemos
+Luego agregamos los puertos que necesitemos.
+
+Luego ejecutamos el siguiente comando:
 ```
 Services iptables restart
 ```
@@ -54,7 +56,7 @@ Instalo El Flask en el ambiente
 Pip install Flask
 ```
 **3)Clono el repositorio que necesito**
-En este repositorio añadiremos los archivos que se manejen
+En este repositorio añadiremos los archivos que se manejen.
 ```
 mkdir los_repositorios
 cd los_repositorios
@@ -63,7 +65,7 @@ cd parcialUno
 
 git config remote.origin.url "https://token@github.com/dylan9538/parcialUno.git"
 ```
-En el campo token añado el token generado en github
+En el campo token añado el token generado en github.
 
 **4)Creo un directorio para el ejercicio dentro del repositorio clonado**
 ```
@@ -71,7 +73,7 @@ $ cd ~/
 $ mkdir -p ejercicios/ejercicio1
 $ cd ejercicios/ejercicio1
 ```
-**5)Creo el archivo files_commands.py que contiene el siguiente codigo**
+**5)Creo el archivo files_commands.py que contiene el siguiente código**
 ```
 from subprocess import Popen, PIPE
 
@@ -141,14 +143,11 @@ if __name__ == "__main__":
   app.run(host='0.0.0.0',port=8088,debug='True')
 ```
 
-
-
-
 Luego ejecuto el comando:
 ```
 Python files.py
 ```
-##PANTALLAZOS SOLUCION
+##PANTALLAZOS SOLUCIÓN
 
 **Prueba GET FILES**
 ![alt text](https://github.com/dylan9538/parcialUno/blob/master/GET%20FILES.PNG "Prueba GET de /files")
@@ -162,7 +161,7 @@ Python files.py
 **Prueba UPDATE FILES**
 ![alt text](https://github.com/dylan9538/parcialUno/blob/master/UPDATE_FILE.PNG "Prueba GET de /files")
 
-##CUANDO QUIERA SUBIR ARCHIVOS
+##CUANDO QUIERA SUBIR ARCHIVOS AL GITHUB REPOSITORIO
 
 1)Creo el archivo si no existe.
 
