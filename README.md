@@ -71,7 +71,7 @@ $ cd ~/
 $ mkdir -p ejercicios/ejercicio1
 $ cd ejercicios/ejercicio1
 ```
-**5)Creo el archivo files_commands.py que contiene el siguiente codigo **
+**5)Creo el archivo files_commands.py que contiene el siguiente codigo**
 
 ![alt text](https://github.com/dylan9538/BodegaeSemaforo/blob/master/DiagramClassSemaforo.PNG "Diagrama de clases")
  
