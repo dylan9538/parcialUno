@@ -1,9 +1,9 @@
 # PARCIAL 1
 
 ****
-Estudiante | Código
---- | --- | ---
-Dylan Torres | 12103021 
+Estudiante | Dylan Torres 
+
+Código | 12103021 
 ****
 ##PASOS PREVIOS PARA DESARROLLAR EL PARCIAL
 SE SIGUEN LOS SIGUIENTES PASOS CON SUS COMANDOS
